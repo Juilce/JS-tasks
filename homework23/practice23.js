@@ -119,13 +119,15 @@ for(let j = 2; j <= 9; j++){
         console.log(j + " * " + i + " = " + j*i);
     }
 }*/
+
 /*
 //task 10
 let num = Math.floor(Math.random() * 101);
 let quess = Boolean(true);
 let option;
 
-while (quess) {
+do {
+    while (quess) {
     option = +prompt("Enter your number 0-100");
     if (num == option){
         alert("you win");
@@ -136,5 +138,5 @@ while (quess) {
         alert("Number is smaller");
     }    
 }
+} while(confirm(`Do you want to continue?`))
 */
-
