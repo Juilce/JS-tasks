@@ -175,5 +175,3 @@ if (q1 == true){
 }  */
 
 // task 10
-let data = prompt("enter the data")
-let part
