@@ -131,8 +131,49 @@ if (d <= a){
     alert("Коло не поміститься в квадрат")
 } */
 
+/* 
+//task 9 доробити
+let q1 = prompt("Образ Вічного революціонера оспівано в поезії: 1- Тараса Шевченка, 2 - Лесі Українки, 3 - Івана Франка");
+let q2 = prompt("В амфібій, на відміну від рептилій: 1 - тіло вкрите шкірою, 2- розвиток відбувається з перетворенням, 3 - протоки видільної системи відкриваються в клоаку");
+let q3 = prompt("У носовій порожнині людини повітря: 1 - насичується вуглекислим газом, 2 - насичується киснем, 3- знезаражується");
+let isRight; 
+ switch(q1){
+   case 1:
+   isRight = false;
+   break;
+   case 2:
+   isRight = false;
+   break;
+   case 3:
+   isRight = true;
+   break;
+ }
+ switch(q2){
+  case 1:
+  isRight = false;
+  break;
+  case 2:
+  isRight = true;
+  break;
+  case 3:
+  isRight = false;
+  break;
+}
+switch(q3){
+  case 1:
+  isRight = false;
+  break;
+  case 2:
+  isRight = false;
+  break;
+  case 3:
+  isRight = true;
+  break;
+}
+if (q1 == true){
+  alert("2 points")
+}  */
 
-//task 9
-
-
-
+// task 10
+let data = prompt("enter the data")
+let part
