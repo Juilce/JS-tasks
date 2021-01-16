@@ -125,18 +125,21 @@ for(let j = 2; j <= 9; j++){
 let num = Math.floor(Math.random() * 101);
 let quess = Boolean(true);
 let option;
-
-do {
+do{
     while (quess) {
     option = +prompt("Enter your number 0-100");
     if (num == option){
         alert("you win");
-        quess = Boolean(false);
+        //quess = Boolean(false);
+        break;
     } else if (num > option){
         alert("Number is bigger");
     } else if (num < option){
         alert("Number is smaller");
     }    
+    if(!quess){
+        alert("EXIT OF THE PROGRAM");
+    }
 }
-} while(confirm(`Do you want to continue?`))
+} while (confirm(`Do you want to play?`)); 
 */
