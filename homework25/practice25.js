@@ -66,6 +66,7 @@ function timeObj(hour, min, sec){
     this.hour = hour;
     this.min = min;
     this.sec = sec;
+    this.addSec = addSec;
 }
 
 function timeShow(t){
@@ -78,3 +79,17 @@ let t = new timeObj(h, m, s)
 
 timeShow(t);
 
+function addSec(second){
+    let newSec = second + this.sec;
+    if(newSec > 60){
+        let newMin = this.min + Math.trunc(newSec/60);
+        let sMin = newSec - Math.trunc(newSec/60) * 60;
+        console.log(this.hour + ":" + newMin + ":" + sMin);
+    }  else{
+    console.log(this.hour + ":" + this.min + ":" + newSec);
+    }
+}
+
+let newTime = new timeObj(h, m, s);
+let addSeconds = +prompt("Enter additional seconds to your time");
+newTime.addSec(addSeconds);
