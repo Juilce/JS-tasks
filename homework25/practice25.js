@@ -60,3 +60,21 @@ let one = new number(numerator1, denominator1);
 let two = new number(numerator2, denominator2);
 
 division(one,two); */
+
+//task 3
+function timeObj(hour, min, sec){
+    this.hour = hour;
+    this.min = min;
+    this.sec = sec;
+}
+
+function timeShow(t){
+    console.log(t.hour + ":" + t.min + ":" + t.sec);
+}
+let h = +prompt("Enter hours");
+let m = +prompt("Enter minutes");
+let s = +prompt("Enter seconds");
+let t = new timeObj(h, m, s)
+
+timeShow(t);
+
