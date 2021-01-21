@@ -66,18 +66,19 @@ function timeObj(hour, min, sec){
     this.hour = hour;
     this.min = min;
     this.sec = sec;
+    this.timeShow = timeShow;
     this.addSec = addSec;
 }
 
-function timeShow(t){
-    console.log(t.hour + ":" + t.min + ":" + t.sec);
+function timeShow(){
+    console.log(this.hour + ":" + this.min + ":" + this.sec);
 }
 let h = +prompt("Enter hours");
 let m = +prompt("Enter minutes");
 let s = +prompt("Enter seconds");
-let t = new timeObj(h, m, s)
+let currentTime = new timeObj(h, m, s)
 
-timeShow(t);
+currentTime.timeShow();
 
 function addSec(second){
     let newSec = second + this.sec;
