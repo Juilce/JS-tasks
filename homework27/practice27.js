@@ -1,4 +1,4 @@
-
+/*
 //task 1
 class Circle {
     constructor (radius){
@@ -25,8 +25,14 @@ alert(circle.radius);
 alert(circle.diametr);
 circle.square();
 circle.length();
+*/
 
-
+let body = document.getElementsByTagName("body")[0];
+let tab = document.createElement("table");
+let tabbody = document.createElement("tbody");
+tab.append(tabbody);
+body.append(tab);
+tab.className = "content";
 
 class Employee {
  constructor(name, position, experience){
@@ -49,9 +55,8 @@ class EmpTable {
     }
 
     getHtml(){
-        let body = document.getElementsByTagName("body")[0];
-        let tab = document.createElement("table");
-        let tabbody = document.createElement("tbody")
+        let arr = this.array;
+        let tableContent = document.getElementById('content')
         let head = document.createElement("tr");
         let h1 = document.createElement("th");
         h1.textContent = "Name";
@@ -59,22 +64,25 @@ class EmpTable {
         h2.textContent = "Position";
         let h3 = document.createElement("th");
         h3.textContent = "Experience";
-        head.appendChild(h1);
-        head.appendChild(h2);
-        head.appendChild(h3);
-        for(let i = 0; i < this.array.length; i++){
+        head.append(h1);
+        head.append(h2);
+        head.append(h3);
+        tableContent.append(head);
+        for(let i = 0; i < arr.length; i++){
             let row = document.createElement("tr");
-            for(let j = 0; j < this.array[i].length; j++){
+            tableContent.append(row);
+            for(let j = 0; j < arr[i].length; j++){
                 let column = document.createElement("td");
-                let cellText = document.createTextNode(this.array[i][j]);
-                column.appendChild(cellText);
-                row.appendChild(column);
+                column.textContent(arr[i][j]);
+                
+                row.append(column);
+
             }
-            tabbody.append(row);
+            
         }
-        tab.append(tabbody);
-        body.append(tab);
-        tab.setAttribute("border","2");
+        
+        tableContent.setAttribute("border","2px");
+        
     }
     
 }
