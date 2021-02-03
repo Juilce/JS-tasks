@@ -30,9 +30,13 @@ circle.length();
 let body = document.getElementsByTagName("body")[0];
 let tab = document.createElement("table");
 let tabbody = document.createElement("tbody");
+
+tabbody.setAttribute('id', 'content');
+tabbody.className = "content";
+
+
 tab.append(tabbody);
 body.append(tab);
-tab.className = "content";
 
 class Employee {
  constructor(name, position, experience){
@@ -54,9 +58,9 @@ class EmpTable {
         this.array = array;
     }
 
-    getHtml(){
+    getHtml() {
         let arr = this.array;
-        let tableContent = document.getElementById('content')
+        let tableContent = document.getElementById('content');
         let head = document.createElement("tr");
         let h1 = document.createElement("th");
         h1.textContent = "Name";
@@ -68,20 +72,20 @@ class EmpTable {
         head.append(h2);
         head.append(h3);
         tableContent.append(head);
-        for(let i = 0; i < arr.length; i++){
+        for(let i in arr){
             let row = document.createElement("tr");
             tableContent.append(row);
-            for(let j = 0; j < arr[i].length; j++){
+            for(let j in arr[i]){
                 let column = document.createElement("td");
-                column.textContent(arr[i][j]);
-                
-                row.append(column);
+                column.textContent = arr[i][j];
 
+                row.append(column);
+                column.setAttribute("style", "padding: 5px 10px; font-size: 18px; border: 1px solid; text-align: center");
             }
             
         }
         
-        tableContent.setAttribute("border","2px");
+        tableContent.setAttribute("style","margin: 20px");
         
     }
     
