@@ -6,6 +6,50 @@
     <title>Document</title>
 </head>
 <body>
+  <!-- <div>
+       <input type="text">
+       <input type="text">
+   </div>
+       <p id="test"></p>-->
+      <style> #resize {
+        position: relative;
+        width: 130px;
+        height: 130px;
+        border: 2px solid blue;
+        color: white;
+      }
+      
+      #resizable {
+        background-color: blue;
+        width: 10px;
+        height: 10px;
+        cursor: se-resize;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }</style>
+      <div id="resize">
+      
+        <div id="resizable">
+        </div>
+    </div>
     <script src="practice.js"></script>
+    <script>
+        
+     /*   let elems = document.querySelector('input');
+        let text = document.querySelector('#test');
+
+        for(let i = 0; i < elems.length; i++){
+            elems[i].addEventListener('focus', func)
+        }
+        function func(){
+            if(this.value){
+                alert(this.value);
+                this.removeEventListener('focus', func);
+            }
+        }*/
+
+    </script>
 </body>
+
 </html>
