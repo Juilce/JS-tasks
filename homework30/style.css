@@ -40,10 +40,8 @@
     margin: 0 auto;
     width: 800px;
     font-size: 40px;
-    font-weight: 900;
-    
+    font-weight: 900;   
 }
-
 .slider{
     width: 100%;
     margin: 0 auto;
@@ -83,7 +81,7 @@
     right: 0;
     height: 100%;
     width: 100%;
-    visibility: hidden;
+    opacity: 0;
 }
 .back__title, .back__text {
     position: absolute;
@@ -110,12 +108,12 @@ left: 30px;
 .pictures:hover .pictures__image {
     transform: rotate3d(1,1,1,360deg);
     transition-duration: 2s;
-opacity: 0;
+opacity: 0.3;
 }
 .pictures:hover .back {
     transform: rotate3d(1,1,1,360deg);
     transition-duration: 2s;
-    visibility: visible;
+    opacity: 0.7;
     }
 
     .slick-next, .slick-prev{
@@ -134,5 +132,33 @@ opacity: 0;
     .slick-next{
         right: 0px;
     }
-
+    @media screen and (max-width: 1240px) {
     
+        .image1{
+            right: 200px;
+        }
+        .image2{
+            left: 200px;
+        }
+      }
+
+    @media screen and (max-width: 900px) {
+        .top {
+            width: auto;
+         max-width: 650px;
+        }
+        .top__title{
+            width: inherit;
+            font-size: 10px;
+        }
+        .top__text{
+            width: inherit;
+            font-size: 20px;
+        }
+        .image1{
+            right: 50px;
+        }
+        .image2{
+            left: 50px;
+        }
+      }
