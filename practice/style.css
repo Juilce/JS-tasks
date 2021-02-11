@@ -16,11 +16,12 @@ body{
 }
 
 .logo{
-    font-size: 30px;
+    font-size: 39px;
 }
 
 .nav{
-    
+    display: flex;
+    list-style: none;
 }
 .slider .slide{
     height: 100vh;
