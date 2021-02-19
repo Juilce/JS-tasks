@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Maps API</title>
+</head>
+<body>
+<div id="map"></div>
+<div id="choose">
+    <strong>Starting point</strong>
+        <select name="" id="start">
+            <option value="вулиця Університетська, 1, Ірпінь, Київська обл., 08200">вулиця Університетська, 1, Ірпінь</option>
+            <option value="вулиця Хрещатик, 14, Київ, 02000">вулиця Хрещатик, 14, Київ</option>
+            <option value="Парк імені Тараса Шевченка, бульвар Тараса Шевченка, Київ">Парк імені Тараса Шевченка, Київ</option>
+            <option value="Київський політехнічний інститут">Київський політехнічний інститут</option>
+        </select>
+    
+    <strong>Ending point</strong>
+        <select name="" id="end">
+            <option value="вулиця Університетська, 1, Ірпінь, Київська обл., 08200">вулиця Університетська, 1, Ірпінь</option>
+            <option value="вулиця Хрещатик, 14, Київ, 02000">вулиця Хрещатик, 14, Київ</option>
+            <option value="Парк імені Тараса Шевченка, бульвар Тараса Шевченка, Київ">Парк імені Тараса Шевченка, Київ</option>
+            <option value="Київський політехнічний інститут">Київський політехнічний інститут</option>
+        </select>
+   
+    <strong>Travel mode</strong>
+        <select name="" id="mode">
+            <option value="drive">Driving</option>
+            <option value="walk">Walking</option>
+            <option value="bicycle">Bicycling</option>
+            <option value="transit">Transit</option>
+        </select>
+  
+</div>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCWNqYs85-Z-QZ-ZizJm-OAX7GRCqVBbI&callback=initMap"
+type="text/javascript"></script>
+    <script src="practise33.js"></script>
+</body>
+</html>
