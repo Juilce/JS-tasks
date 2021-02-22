@@ -1,0 +1,201 @@
+h1, h2, h3{
+    font-family: $addFont;
+}
+p{
+    font-family: $fontMain;
+}
+.header{
+    background-image: url(image/Bg.jpg);
+    width: 100%;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-height: 800px;
+    color: #ffff;
+    align-items: center;
+    &__navigation{
+        margin-top: 250px;
+        max-height: 55px;
+        max-width: 1175px;
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 10;
+
+    }
+    &__logo{
+        width: 100%;
+        height: auto;
+        font-size: 70px;
+        letter-spacing: 5px;
+        @include _768{
+            width: auto;
+        }
+    }
+    
+    &__icons{
+        max-width: 150px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 80px;
+        margin-left: 1010px;
+    }
+    &__slider{
+        margin-top: 250px;
+    }
+    &__slide {
+    height: 250px;
+    width: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+   
+    &__text{
+        font-size: rem-calc(15px);
+        margin-top: -20px;
+        margin-bottom: 40px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        @include _768{
+            font-size: rem-calc(18px);
+        }
+    }
+   
+    &__down{
+        margin-top: 200px;
+        display: flex;
+        justify-content: center;
+    }
+   
+    &__icon{
+        color: $baseColor;
+        font-size: rem-calc(15px);
+        font-weight: light;
+        border: 1px solid #ffff;
+        border-radius: 50%;
+        margin-bottom: 100px;
+        padding: 20px;
+        &:hover{
+            font-size: rem-calc(20px);
+            color: red;
+            border: 1px solid red;
+
+        }
+    }   
+
+}
+
+
+.nav{
+    max-width: 1040px;
+    display: flex;
+    position: fixed;
+    top: 50px;
+&__logo{
+    margin-right: 70px;
+} 
+
+    &__toggle,
+    &__btn {
+        display: none;
+    }
+    &__btn{
+        padding: 28px 20px;
+        @include _768 {
+            display: block;
+            text-align: center;
+            padding-left: 0;
+            padding-right: 0;
+            &:hover{
+                color: $secondColor;
+            }
+        }
+    }
+
+    &__toggle{
+        &:checked + .nav__list {
+            visibility: visible;
+        }
+    }
+
+    &__list{
+        display: flex;
+        list-style: circle;
+        margin-right: 50px;
+        @include _768 {
+            position: absolute;
+            flex-direction: column;
+            visibility: hidden;
+            width: 100%;
+            margin: 0;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+    }
+    &__link {
+        display: inline-block;
+        text-decoration: none;
+        color: $baseColor;
+        font-size: rem-calc(14px);
+        &:hover,
+        &:focus {
+            color: $secondColor;
+        }
+        @include _768{
+            font-size: rem-calc(20px);
+            padding-top: 5px;
+        }
+    }
+   
+    &__item {
+        margin-right: 60px;
+        @include _768 {
+            margin-left: 40px;
+        }
+        & + & {
+            margin-left: 40px;
+        }
+    }
+ 
+
+}
+.slick-dots {
+    position: absolute;
+    z-index: 9;
+    list-style: none;
+    right: 10px;
+    padding: 10px;
+    justify-content: center;
+    bottom: 0px;
+}
+.slick-dots button {
+    font-size: 0;
+    border-radius: 62%;
+    height: 15px;
+    width: 5px;
+    margin: 15px;
+    border: 1px solid #ffff;
+    margin-right: 10px;
+    background: transparent;
+}
+
+.icon{
+    &__svg{
+    width: 15px;
+    height: 12px;
+    display: block;
+    fill: $baseColor;
+   border: 1px solid #ffff;
+   border-radius: 50%;
+   padding: 8px;
+   margin-right: 17px;
+    &:hover{
+        fill: red;
+    }
+    }
+}
+
