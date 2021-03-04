@@ -1,0 +1,85 @@
+.container{
+    width: 1050px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.first{
+    display: flex;
+    justify-content: space-between;
+}
+.second{
+    display: flex;
+    justify-content: space-between;
+}
+.third{
+    display: flex;
+    justify-content: space-between;
+}
+
+img{
+width: 200px;
+height: 300px;
+}
+.picture{
+    width: 300px;
+    height: auto;
+    position: relative;
+}
+.icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    visibility: hidden;
+}
+.back{
+    position: relative;
+
+}
+.picture:hover .back {
+    transform: rotate3d(1,1,1,360deg);
+    transition-duration: 2s;
+visibility: hidden;
+}
+.picture:hover .icon {
+    transform: rotate3d(1,1,1,360deg);
+    transition-duration: 2s;
+    visibility: visible;
+    }
+.one{
+    transform: rotateY(180deg);
+}
+    .picture:hover .oneb {
+        transform: rotateY(180deg);
+        transition-duration: 5s;
+    visibility: hidden;
+    }
+    .picture:hover .one {
+        transform: rotateY(360deg);
+        transition-duration: 4s;
+        visibility: visible;
+        }
+.two{
+    transform: rotateX(180deg);
+}
+.picture:hover .twob {
+    transform: rotateX(180deg);
+    visibility: hidden;
+}
+.picture:hover .two {
+    transform: rotateZ(360deg);
+    visibility: visible;
+}
+.three{
+    transform: rotateZ(180deg);
+}
+.picture:hover .threeb {
+    transform: rotateZ(180deg);
+    opacity: 0;
+}
+.picture:hover .three {
+    transform: rotateZ(360deg);
+    visibility: visible;
+}
