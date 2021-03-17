@@ -3,11 +3,11 @@ let button = new Vue({
     data:{
         container: '',
         typedText: '',
-        isChosen: true,
+        isChosen: false,
     },
     methods: {
         chooseOrNot (){
-            if(this.isChosen){
+            if(!this.isChosen){
                 this.container = true;
                 this.isChosen = true;
             } else {
